@@ -22,7 +22,7 @@ const moment = require("moment");
       !queryStockName.data.suggestions ||
       queryStockName.data.suggestions[0] === "(無符合之代碼或名稱)"
     ) {
-      throw new Error("查無此代表");
+      throw new Error("查無此代碼");
     }
     // 可以到這裡，表示有資料
     let stockData = queryStockName.data.suggestions[0];
