@@ -10,7 +10,11 @@ let doWork = function (job, timer) {
   });
 };
 
-// 當三個全部都做完的時候，就會回來 3s
+let p1 = doWork("刷牙", 2000);
+let p2 = doWork("吃早餐", 1000);
+let p3 = doWork("寫功課", 3000);
+
+// 當三個全部都做完的時候，才會顯示: 3s後，找最長的時間
 Promise.all([p1, p2, p3]).then((values) => {
   console.log(values);
 });

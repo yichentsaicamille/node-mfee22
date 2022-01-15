@@ -12,6 +12,7 @@
 // Promise 物件會有狀態的移轉
 // 剛建立的時候狀態會是 pending
 
+// 建構式
 let doWork = function (job, timer) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -27,11 +28,6 @@ let doWork = function (job, timer) {
 // 刷牙 --> 吃早餐 --> 寫功課
 let dt = new Date();
 console.log(`Start ${dt.toISOString()}`);
-// let work1Promise = doWork("刷牙", 2000);
-// work1Promise.then((result) => {
-//   let dt = new Date();
-//   console.log(`${result} at ${dt.toISOString()}`);
-// });
 
 doWork("刷牙", 2000)
   .then((result) => {
@@ -43,6 +39,7 @@ doWork("刷牙", 2000)
   .then((result) => {
     let dt = new Date();
     console.log(`${result} at ${dt.toISOString()}`);
+
     return doWork("寫功課", 2000);
   })
   .then((result) => {

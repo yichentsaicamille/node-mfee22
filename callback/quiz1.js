@@ -1,4 +1,4 @@
-// 沒有 await => 41235
+// 沒有 await => 41352
 // 有 await => 41523
 async function test() {
   console.log(1);
