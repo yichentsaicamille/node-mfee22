@@ -48,32 +48,32 @@ function sum_recursive(n) {
 // 壓力測試
 
 // for 迴圈
-console.time("for");
+console.time('for');
 for (let i = 1; i <= 100000; i++) {
   sum_for(1000); // O(n)
 }
-console.timeEnd("for");
+console.timeEnd('for');
 
 // 梯形公式
-console.time("formula");
+console.time('formula');
 for (let i = 1; i <= 100000; i++) {
   sum_formula(1000); // O(1)
 }
-console.timeEnd("formula");
+console.timeEnd('formula');
 
 // 陣列
-console.time("array");
+console.time('array');
 for (let i = 1; i <= 100000; i++) {
   sum_array(1000); // O(1)
 }
-console.timeEnd("array");
+console.timeEnd('array');
 
 // 遞迴
-console.time("recursive");
+console.time('recursive');
 for (let i = 1; i <= 100000; i++) {
   sum_recursive(1000); // O(1)
 }
-console.timeEnd("recursive");
+console.timeEnd('recursive');
 
 //結果
 /*
